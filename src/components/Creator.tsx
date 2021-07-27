@@ -8,9 +8,8 @@ export default function Creator() {
 
   const submit = (e: any) => {
     e.preventDefault();
-    const ary = [...tasks];
-    ary.push({ id: id, title: name });
-    setTask(ary);
+
+    setTask([...tasks, { id: id, title: name }]);
     setName("");
     setId(id + 1);
   };
